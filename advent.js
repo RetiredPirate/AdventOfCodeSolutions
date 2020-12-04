@@ -4,7 +4,7 @@ const path = require('path')
 const [year, day] = process.argv.slice(2)
 
 function getInputFromFile(delimiter) {
-    delimiter = delimiter || '\n'
+    delimiter = delimiter || '\r\n'
     const inputPath = path.join(__dirname, year, `Day${day}`, 'input.txt')
     let input = null
     if (fs.existsSync(inputPath)) {
