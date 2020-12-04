@@ -8,7 +8,7 @@ function getInputFromFile(delimiter) {
     const inputPath = path.join(__dirname, year, `Day${day}`, 'input.txt')
     let input = null
     if (fs.existsSync(inputPath)) {
-        input = fs.readFileSync(inputPath).toString().split(delimiter)
+        input = fs.readFileSync(inputPath).toString().split(delimiter).map(line => line.trim())
     }
     return input
 }
